@@ -1,0 +1,6 @@
+---
+title: "hw0"
+author: "Owen"
+date: "2024-01-20"
+categories: [week 0, example]
+---

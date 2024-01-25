@@ -1,0 +1,38 @@
+---
+title: "hw0"
+author: "Owen Sun"
+date: "2024-01-24"
+categories: [news, code, analysis]
+---
+
+
+# Construct an interesting data visualization of the [Palmer Penguins](https://github.com/allisonhorst/palmerpenguins) data set.
+
+Here is how we make a pairplot for panguins
+
+```{python}
+import pandas as pd
+url = "https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv"
+penguins = pd.read_csv(url)
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Assuming penguins dataset is already loaded as shown in your output
+# penguins = sns.load_dataset("penguins")
+
+plt.figure(figsize=(10, 10)) 
+
+# Construct a pairplot
+sns.pairplot(penguins, hue="studyName", palette="Set2", diag_kind="kde", markers=["o", "s", "D"])
+
+# Enhance the plot
+plt.suptitle("Pairplot of Palmer Penguins Dataset", size=16)
+plt.subplots_adjust(top=0.9)  # Adjust title position
+
+
+plt.show()
+
+
+
+```
+
